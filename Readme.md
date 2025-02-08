@@ -70,23 +70,37 @@ This class extends `Heap` and implements the `heapify` function for maintaining 
 ## Usage 🛠️
 ```cpp
 int main(){
-    MinHeap minHeap;
-    MaxHeap maxHeap;
+    //INITIALISE
+    MinHeap a;
+    MaxHeap b;
 
-    minHeap.insert(4);
-    maxHeap.insert(4);
-    minHeap.insert(2);
-    maxHeap.insert(8);
+    //INSERT
+    a.insert(4);
+    b.insert(4);
+    a.insert(4);
+    b.insert(4);
 
-    minHeap.pop();
-    maxHeap.pop();
+    //POP
+    a.pop();
+    b.pop();
 
-    cout << "MinHeap Top: " << minHeap.top() << endl;
-    cout << "MaxHeap Top: " << maxHeap.top() << endl;
+    //SIZE
+    cout << "Size of a MinHeap = " << a.size() << endl;
+    cout << "Size of b MaxHeap = " << b.size() << endl;
 
-    minHeap.print();
-    maxHeap.print();
+    //TOP
+    cout << "Top element of a MinHeap = " << a.top() << endl;
+    cout << "Top element of b MaxHeap = " << b.top() << endl;
 
+    //PRINT
+    cout << "Printing a MinHeap :" << endl;
+    a.print();
+    cout << "Printing b MaxHeap :" << endl;
+    b.print();
+
+    //IS-EMPTY
+    cout << (a.empty() ? "MinHeap a is empty!" : "a MinHeap is not empty!") << endl;
+    cout << (b.empty() ? "MaxHeap b is empty!" : "b MaxHeap is not empty!") << endl;
     return 0;
 }
 ```
